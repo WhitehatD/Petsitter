@@ -1,12 +1,215 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+
+
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".RegisterActivity">
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/white"
+
+    tools:context=".MainActivity">
 
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <TextView
+        android:id="@+id/intrare"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_150sdp"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:font="@font/res_title_font"
+        android:gravity="bottom"
+
+        android:text="Înregistrare"
+        android:textColor="@color/main_color"
+        android:textSize="@dimen/_35sdp"
+        android:textStyle="bold" />
+
+
+    <TextView
+        android:id="@+id/va_rugam"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:layout_marginBottom="@dimen/_50sdp"
+        android:font="@font/res_title_font"
+
+        android:layout_below="@+id/intrare"
+
+        android:text="Creează-ți un cont"
+        android:textColor="@color/gray"
+        android:textSize="@dimen/_14sdp"
+        android:textStyle="bold" />
+
+    <com.google.android.material.textfield.TextInputLayout
+
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:id="@+id/mail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_below="@id/va_rugam"
+
+
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:layout_marginBottom="@dimen/_7sdp"
+
+        android:hint="Email"
+        app:startIconDrawable="@drawable/ic_baseline_email_24">
+
+
+        <com.google.android.material.textfield.TextInputEditText
+
+            android:maxLines="1"
+            android:singleLine="true"
+            android:maxLength="100"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:id="@+id/password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_below="@id/mail"
+
+
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:layout_marginBottom="@dimen/_25sdp"
+
+        android:hint="Parolă"
+        app:startIconDrawable="@drawable/ic_baseline_lock_open_24">
+
+
+        <com.google.android.material.textfield.TextInputEditText
+
+            android:maxLines="1"
+            android:singleLine="true"
+            android:maxLength="100"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:id="@+id/repet_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="@dimen/_minus20sdp"
+        android:layout_below="@id/password"
+
+
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:layout_marginBottom="@dimen/_25sdp"
+
+        android:hint="Repetă parola"
+        app:startIconDrawable="@drawable/ic_baseline_lock_open_24">
+
+
+        <com.google.android.material.textfield.TextInputEditText
+
+            android:maxLines="1"
+            android:singleLine="true"
+            android:maxLength="100"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <LinearLayout
+        android:id="@+id/linear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:layout_below="@id/repet_password"
+        android:layout_marginBottom="@dimen/_50sdp"
+        >
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/registerButton"
+
+            android:layout_width="@dimen/_250sdp"
+            android:layout_height="@dimen/_60sdp"
+
+
+            android:layout_marginStart="@dimen/_20sdp"
+
+            android:layout_marginTop="@dimen/_40sdp"
+            android:layout_marginEnd="@dimen/_20sdp"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_15sdp"
+            android:text="Continuare" >
+        </com.google.android.material.button.MaterialButton>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/status"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/linear"
+        android:layout_marginTop="@dimen/_minus50sdp"
+        android:font="@font/res_title_font"
+        android:foregroundGravity="center"
+
+        android:gravity="center_horizontal"
+        android:textSize="@dimen/_10sdp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:id="@+id/back"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/linear"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/backButton"
+
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginStart="@dimen/_20sdp"
+
+            android:layout_marginTop="@dimen/_40sdp"
+            android:layout_marginEnd="@dimen/_20sdp"
+            android:text="Înapoi la Conectare"
+            android:textSize="@dimen/_13sdp"
+
+
+            android:textAllCaps="false" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>
 

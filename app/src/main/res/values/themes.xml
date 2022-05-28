@@ -2,9 +2,14 @@
     <!-- Base application theme. -->
     <style name="Theme.Petsitter" parent="Theme.MaterialComponents.Light.NoActionBar">
         <!-- Primary brand color. -->
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowNoTitle">true</item>
         <item name="colorPrimary">@color/main_color</item>
         <item name="colorPrimaryVariant">@color/second_color</item>
         <item name="colorOnPrimary">@color/third_color</item>
+
+        <item name="android:statusBarColor">@color/white</item>
+
     </style>
 
 
