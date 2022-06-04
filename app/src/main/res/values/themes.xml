@@ -9,6 +9,7 @@
         <item name="colorOnPrimary">@color/third_color</item>
 
         <item name="android:statusBarColor">@color/white</item>
+        <item name="android:navigationBarColor">@color/main_color</item>
 
     </style>
 
