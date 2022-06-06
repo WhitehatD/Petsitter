@@ -1,12 +1,22 @@
 package com.alexc.petsitter;
 
 
+
+import android.view.MenuItem;
+
+import androidx.annotation.NonNull;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.navigation.NavController;
 import androidx.navigation.fragment.NavHostFragment;
 import androidx.navigation.ui.NavigationUI;
+
 import com.google.android.material.navigation.NavigationBarView;
 
 public class ProfileActivity extends CustomAppCompatActivity {
+
+
 
     @Override
     protected void onCreate() {
@@ -19,14 +29,7 @@ public class ProfileActivity extends CustomAppCompatActivity {
         NavigationUI.setupWithNavController(view, controller);
 
 
-       /* Button logout = findViewById(R.id.logoffButton);
-        logout.setOnClickListener(v -> {
-
-            mAuth.signOut();
-            startActivity(new Intent(getApplicationContext(), LoginActivity.class));
-
-
-
-        });*/
     }
+
+
 }
